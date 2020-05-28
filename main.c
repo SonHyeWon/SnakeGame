@@ -2,8 +2,9 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>			/* for sprintf() */
+#include <stdio.h>		/* for sprintf() */
 #include <windows.h>		/* for Sleep() and other Windows stuffs */
+#include <stdbool.h>
 #include "screen.h"
 
 #define	MAXLEN	2000	/* maximum snake length */

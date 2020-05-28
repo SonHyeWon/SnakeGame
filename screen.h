@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #ifndef _SCREEN_H_
 #define _SCREEN_H_
 

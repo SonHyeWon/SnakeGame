@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <windows.h>
+#include <stdbool.h>
 #include "screen.h"
 
 void cursor(int visible) {
