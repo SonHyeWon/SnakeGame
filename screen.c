@@ -100,3 +100,7 @@ bool rightMax(int a, int b)
 {
 	return (a<b);
 }
+bool isSameValue(int leftValue, int rightValue)
+{
+	return (leftValue==rightValue);
+}

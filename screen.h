@@ -42,5 +42,8 @@ void box(int x, int y, int w, int h, int c);
 void dialog(int x, int y, int w, int h, int c, const char * title);
 
 bool rightMax(int a, int b);
+
+bool isSameValue(int leftValue, int rightValue);
+
 #endif
 
