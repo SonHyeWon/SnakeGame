@@ -96,3 +96,7 @@ void dialog(int x, int y, int w, int h, int c, const char * title) {
 		writesat(x+tx, y, c, title);
 }
 
+bool rightMax(int a, int b)
+{
+	return (a<b);
+}

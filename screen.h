@@ -41,5 +41,6 @@ void box(int x, int y, int w, int h, int c);
 /* same as box but has a title at the top of the box */
 void dialog(int x, int y, int w, int h, int c, const char * title);
 
+bool rightMax(int a, int b);
 #endif
 
