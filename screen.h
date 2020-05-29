@@ -45,5 +45,6 @@ bool rightMax(int a, int b);
 
 bool isSameValue(int leftValue, int rightValue);
 
+bool isSamePosition(CELL* leftPos, CELL* rightPos);
 #endif
 

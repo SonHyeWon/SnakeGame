@@ -104,3 +104,7 @@ bool isSameValue(int leftValue, int rightValue)
 {
 	return (leftValue==rightValue);
 }
+bool isSamePosition(CELL* leftPos, CELL* rightPos)
+{
+	return (isSameValue(leftPos->x, rightPos->x) && isSameValue(leftPos->y, rightPos->y));
+}
