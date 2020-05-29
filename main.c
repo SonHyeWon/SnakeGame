@@ -5,11 +5,7 @@
 #include <stdio.h>			/* for sprintf() */
 #include <windows.h>		/* for Sleep() and other Windows stuffs */
 #include "screen.h"
-
-#define	MAXLEN	2000	/* maximum snake length */
-#define	CHEAD	'o'
-#define	CBODY	'o'
-#define	CFRUIT	'#'
+#include "object.h"
 
 /* -- GAME LOGIC -- */
 typedef struct _fruit {
