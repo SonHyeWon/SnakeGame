@@ -6,11 +6,13 @@
 #include <windows.h>		/* for Sleep() and other Windows stuffs */
 #include "screen.h"
 #include "object.h"
+#include "ui.h"
 
 int main()
 {
 	SNAKE	snake = { {{0, 4}, {0, 5}}, down, 2, 0 };
 	FRUIT	fruit = { 0, 0, 0 };
+	SCREEN screen;
 	int		i, quit = 0, maxx, maxy, maxclr;
 	char	key, score[32];
 
