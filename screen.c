@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <windows.h>
 #include "screen.h"
+#include "ui.h"
 
 void cursor(int visible) {
     HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
