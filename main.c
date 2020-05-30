@@ -5,31 +5,7 @@
 #include <stdio.h>			/* for sprintf() */
 #include <windows.h>		/* for Sleep() and other Windows stuffs */
 #include "screen.h"
-
-#define	MAX_LENGTH	1000	/* maximum snake length */
-#define	HEAD_SHAPE	'o'
-#define	BODY_SHAPE	'o'
-#define	FRUIT_SHAPE	'#'
-
-/* -- GAME LOGIC -- */
-typedef struct _fruit {
-	int x, y, color;
-} FRUIT;
-
-typedef struct _cell {
-	int x, y;
-} CELL;
-
-typedef enum _navi {
-	up, down, left, right
-} NAVI;
-
-typedef struct _snake {
-	CELL	body[MAX_LENGTH];
-	NAVI	dir;
-	int		length;
-	int		score;
-} SNAKE;
+#include "object.h"
 
 int main()
 {
