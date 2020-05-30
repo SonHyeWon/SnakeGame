@@ -4,7 +4,6 @@
 #include <time.h>
 #include <stdio.h>			/* for sprintf() */
 #include <windows.h>		/* for Sleep() and other Windows stuffs */
-#include "screen.h"
 #include "object.h"
 #include "ui.h"
 
