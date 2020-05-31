@@ -29,6 +29,18 @@ int getHeight()
 	return csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
 }
 
+void createScreen(SCREEN* screen)
+{
+	screen->width = getWidth();
+	screen->height = getHeight();
+
+	screen->startPoint.x = 2;
+	screen->startPoint.y = 5;
+
+	screen->endPoint.x = screen->width - 2;
+	screen->endPoint.y = screen->height - 1;
+}
+
 int getmaxcolor() {
 	return 16;
 }
