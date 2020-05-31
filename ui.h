@@ -20,10 +20,10 @@ void cursor(int visible);
 void textcolor(int x);
 
 /* returns the console screen width in columns */
-int getmaxx();
+int getWidth();
 
 /* returns the console screen width in rows */
-int getmaxy();
+int getHeight();
 
 /* returns the total number of color supported */
 int getmaxcolor();

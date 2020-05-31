@@ -16,8 +16,8 @@ int main()
 	int		i, quit = 0, maxx, maxy, maxclr;
 	char	key, score[32];
 
-	maxx = getmaxx();
-	maxy = getmaxy();
+	maxx = getWidth();
+	maxy = getHeight();
 	maxclr = getmaxcolor();
 
 	cursor(0);							/* hide the cursor back */

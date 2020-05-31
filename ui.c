@@ -15,14 +15,14 @@ void textcolor(int x) {
 	SetConsoleTextAttribute(color, x);
 }
 
-int getmaxx()
+int getWidth()
 {
 	CONSOLE_SCREEN_BUFFER_INFO csbi;
 	GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
 	return csbi.srWindow.Right - csbi.srWindow.Left + 1;
 }
 
-int getmaxy()
+int getHeight()
 {
 	CONSOLE_SCREEN_BUFFER_INFO csbi;
 	GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
