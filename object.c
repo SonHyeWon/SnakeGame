@@ -92,3 +92,13 @@ bool isCollideBoundary(CELL snakePos, SCREEN* screen)
     }
 }
 
+bool isKeyInput(char* inputValue)
+{
+	if (_kbhit())
+	{
+		*inputValue = toupper(_getch));
+		return true;
+	}
+	return false;
+}
+
