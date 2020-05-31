@@ -1,5 +1,6 @@
 #pragma once
 #include <stdbool.h>
+#include "ui.h"
 #define	MAX_LENGTH	1000	/* maximum snake length */
 #define	HEAD_SHAPE	'o'
 #define	BODY_SHAPE	'o'
@@ -10,11 +11,6 @@ typedef struct fruit
 {
 	int x, y, color;
 } FRUIT;
-
-typedef struct cell
-{
-	int x, y;
-} CELL;
 
 typedef enum direction
 {

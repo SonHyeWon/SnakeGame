@@ -1,5 +1,9 @@
-#include "object.h"
 #pragma once
+
+typedef struct cell
+{
+    int x, y;
+} CELL;
 
 typedef struct screenInfo
 {
