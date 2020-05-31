@@ -2,10 +2,11 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>			/* for sprintf() */
+#include <stdio.h>		/* for sprintf() */
 #include <windows.h>		/* for Sleep() and other Windows stuffs */
 #include "object.h"
 #include "ui.h"
+#include <stdbool.h>
 
 int main()
 {

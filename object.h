@@ -1,5 +1,5 @@
 #pragma once
-
+#include <stdbool.h>
 #define	MAX_LENGTH	1000	/* maximum snake length */
 #define	HEAD_SHAPE	'o'
 #define	BODY_SHAPE	'o'
@@ -46,3 +46,10 @@ void box(int x, int y, int w, int h, int c);
 
 /* same as box but has a title at the top of the box */
 void dialog(int x, int y, int w, int h, int c, const char * title);
+
+bool rightMax(int a, int b);
+
+bool isSameValue(int leftValue, int rightValue);
+
+bool isSamePosition(CELL* leftPos, CELL* rightPos);
+

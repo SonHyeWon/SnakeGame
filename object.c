@@ -2,6 +2,7 @@
 #include <windows.h>
 #include "object.h"
 #include "ui.h"
+#include <stdbool.h>
 
 void gotoxy(int x, int y) {
     HANDLE hConsoleOutput;
@@ -55,3 +56,15 @@ void dialog(int x, int y, int w, int h, int c, const char * title) {
 		writesat(x+tx, y, c, title);
 }
 
+bool rightMax(int a, int b)
+{
+	return (a < b);
+}
+bool isSameValue(int leftValue, int rightValue)
+{
+	return (leftValue == rightValue);
+}
+bool isSamePosition(CELL* leftPos, CELL* rightPos)
+{
+	return (isSameValue(leftPos->x, rightPos->x) && isSameValue(leftPos->y, rightPos->y));
+}
