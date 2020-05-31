@@ -25,6 +25,9 @@ int getWidth();
 /* returns the console screen width in rows */
 int getHeight();
 
+/* saves related values in structure screen */
+void createScreen(SCREEN* screen);
+
 /* returns the total number of color supported */
 int getmaxcolor();
 
