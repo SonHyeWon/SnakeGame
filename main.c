@@ -13,18 +13,17 @@ int main()
 	SNAKE	snake = { {{0, 4}, {0, 5}}, down, 2, 0 };
 	FRUIT	fruit = { 0, 0, 0 };
 	SCREEN screen;
-	int		i, quit = 0, maxx, maxy, maxclr;
+	int	i, quit = 0, maxclr;
 	char	key, score[32];
 
-	maxx = getWidth();
-	maxy = getHeight();
+	createScreen(&screen);
 	maxclr = getmaxcolor();
 
 	cursor(0);							/* hide the cursor back */
 	srand(time(NULL));					/* initialize random generator */
 
-	fruit.x = (rand() % maxx) & ~1;		/* force x even and within [0, MAXX-1] */
-	fruit.y = 4 + rand() % (maxy - 5);		/* y always within [4,MAXY-1] */
+	fruit.x = (rand() % screen.width) & ~1;		/* force x even and within [0, MAXX-1] */
+	fruit.y = 4 + rand() % (screen.height - 5);		/* y always within [4,MAXY-1] */
 	fruit.color = 1 + rand() % (maxclr - 1);	/* avoid color 0, since it's black */
 
 	do {
@@ -75,18 +74,18 @@ int main()
 		}
 
 		/* wrap the snake at screen boundaries */
-		if (snake.body[0].y < 4)      snake.body[0].y = maxy - 2;
-		if (snake.body[0].y > maxy - 1) snake.body[0].y = 4;
-		if (snake.body[0].x < 0)      snake.body[0].x = maxx - 2;
-		if (snake.body[0].x > maxx - 1) snake.body[0].x = 0;
+		if (snake.body[0].y < 4)      snake.body[0].y = screen.height - 2;
+		if (snake.body[0].y > screen.height - 1) snake.body[0].y = 4;
+		if (snake.body[0].x < 0)      snake.body[0].x = screen.width - 2;
+		if (snake.body[0].x > screen.width - 1) snake.body[0].x = 0;
 
 		/* snake eats fruits? */
 		if (snake.body[0].x == fruit.x && snake.body[0].y == fruit.y) {
 			snake.length++;		/* it grows */
 			snake.score++;		/* and update the score */
 			/* regenerate a new fruit */
-			fruit.x = (rand() % maxx) & ~1;
-			fruit.y = 4 + rand() % (maxy - 5);
+			fruit.x = (rand() % screen.width) & ~1;
+			fruit.y = 4 + rand() % (screen.height - 5);
 			fruit.color = 1 + rand() % (maxclr - 1);
 		}
 
