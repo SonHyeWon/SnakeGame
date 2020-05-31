@@ -68,3 +68,27 @@ bool isSamePosition(CELL* leftPos, CELL* rightPos)
 {
 	return (isSameValue(leftPos->x, rightPos->x) && isSameValue(leftPos->y, rightPos->y));
 }
+bool isCollideBoundary(CELL snakePos, SCREEN* screen)
+{
+    if (rightMax(snakePos.y, screen->startPoint.y))
+    {
+        return true;
+    }
+    else if (rightMax(screen->endPoint.y, snakePos.y))
+    {
+        return true;
+    }
+    else if (rightMax(snakePos.x, screen->startPoint.x))
+    {
+        return true;
+    }
+    else if (rightMax(screen->endPoint.x, snakePos.x))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
