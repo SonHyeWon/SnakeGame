@@ -49,9 +49,9 @@ int main()
 		}
 
 		/* keyboard handling */
-		if (kbhit())
+		if (_kbhit())
 		{
-			key = toupper(getch());	/* read the key */
+			key = toupper(_getch());	/* read the key */
 			switch (key) {			/* and process it */
 			/* ESC, Q: quit game */
 			case 27:
