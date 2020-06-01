@@ -56,13 +56,24 @@ int main()
 			switch (inputValue) {			/* and process it */
 			/* ESC, Q: quit game */
 			case 27:
-			case 'Q': quit = 1; break;
+			case 'Q':
+				quit = true;
+				break;
 				/* W: Up, S: Down, A: Left, D: Right */
-			case 'W': if (snake.dir != down) snake.dir = up; break;
-			case 'S': if (snake.dir != up) snake.dir = down; break;
-			case 'A': if (snake.dir != right) snake.dir = left; break;
-			case 'D': if (snake.dir != left) snake.dir = right; break;
-			default: break;
+			case 'W':
+				changeDirUp(&snake);
+				break;
+			case 'S':
+				changeDirDown(&snake);
+				break;
+			case 'A':
+				changeDirLeft(&snake);
+				break;
+			case 'D':
+				changeDirRight(&snake);
+				break;
+			default:
+				break;
 			}
 		}
 
