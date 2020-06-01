@@ -13,8 +13,9 @@ int main()
 	SNAKE	snake = { {{0, 4}, {0, 5}}, down, 2, 0 };
 	FRUIT	fruit = { 0, 0, 0 };
 	SCREEN screen;
-	int		i, quit = 0, maxx, maxy, maxclr;
-	char	key, score[32];
+	int		i, maxx, maxy, maxclr;
+	char	inputValue = '\0', score[32];
+	bool	quit = false;
 
 	maxx = getmaxx();
 	maxy = getmaxy();
