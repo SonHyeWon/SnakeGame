@@ -53,3 +53,10 @@ bool isCollideBoundary(CELL snakePos, SCREEN* screen);
 
 bool isKeyInput(char* inputValue);
 
+void changeDirUp(SNAKE* snake);
+
+void changeDirDown(SNAKE* snake);
+
+void changeDirLeft(SNAKE* snake);
+
+void changeDirRight(SNAKE* snake);

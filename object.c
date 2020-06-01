@@ -102,3 +102,34 @@ bool isKeyInput(char* inputValue)
 	return false;
 }
 
+void changeDirUp(SNAKE* snake)
+{
+	if (snake->dir != down)
+	{
+		snake->dir = up;
+	}
+}
+
+void changeDirDown(SNAKE* snake)
+{
+	if (snake->dir != up)
+	{
+		snake->dir = down;
+	}
+}
+
+void changeDirLeft(SNAKE* snake)
+{
+	if (snake->dir != right)
+	{
+		snake->dir = left;
+	}
+}
+
+void changeDirRight(SNAKE* snake)
+{
+	if (snake->dir != left)
+	{
+		snake->dir = right;
+	}
+}
