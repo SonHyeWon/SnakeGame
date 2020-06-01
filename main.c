@@ -15,7 +15,7 @@ int main()
 	SCREEN screen;
 	int		i, maxx, maxy, maxclr;
 	char	inputValue = '\0', score[32];
-	bool	quit = false;
+	bool	quit = false, checkInput = false;
 
 	maxx = getmaxx();
 	maxy = getmaxy();
@@ -50,10 +50,10 @@ int main()
 		}
 
 		/* keyboard handling */
-		if (_kbhit())
+		checkInput = isKeyInput(&inputValue);
+		if (checkInput)
 		{
-			key = toupper(_getch());	/* read the key */
-			switch (key) {			/* and process it */
+			switch (inputValue) {			/* and process it */
 			/* ESC, Q: quit game */
 			case 27:
 			case 'Q': quit = 1; break;
