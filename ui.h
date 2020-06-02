@@ -29,7 +29,7 @@ int getHeight();
 void createScreen(SCREEN* screen);
 
 /* returns the total number of color supported */
-int getmaxcolor();
+int getMaxColorValue();
 
 /* clear the screen */
 void clrscr();

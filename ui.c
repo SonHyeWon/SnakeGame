@@ -41,7 +41,7 @@ void createScreen(SCREEN* screen)
 	screen->endPoint.y = screen->height - 1;
 }
 
-int getmaxcolor() {
+int getMaxColorValue() {
 	return 16;
 }
 

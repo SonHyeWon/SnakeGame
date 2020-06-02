@@ -18,7 +18,7 @@ int main()
 	bool	quit = false, checkInput = false;
 
 	createScreen(&screen);
-	maxclr = getmaxcolor();
+	maxclr = getMaxColorValue();
 
 	cursor(0);							/* hide the cursor back */
 	srand(time(NULL));					/* initialize random generator */
