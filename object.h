@@ -51,6 +51,8 @@ bool isSamePosition(CELL* leftPos, CELL* rightPos);
 
 bool isCollideBoundary(CELL snakePos, SCREEN* screen);
 
+bool isCollideBody(SNAKE* snake);
+
 bool isKeyInput(char* inputValue);
 
 void changeDirUp(SNAKE* snake);
@@ -60,3 +62,4 @@ void changeDirDown(SNAKE* snake);
 void changeDirLeft(SNAKE* snake);
 
 void changeDirRight(SNAKE* snake);
+
