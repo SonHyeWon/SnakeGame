@@ -96,7 +96,7 @@ bool isKeyInput(char* inputValue)
 {
 	if (_kbhit())
 	{
-		*inputValue = toupper(_getch));
+		*inputValue = toupper(_getch());
 		return true;
 	}
 	return false;
