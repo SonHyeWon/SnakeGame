@@ -159,3 +159,13 @@ void UpdateBody(SNAKE *snake)
 		snake->body[i] = snake->body[i - 1];
 	}
 }
+
+bool isEven(int number)
+{
+	if (number % 2 == 0)
+	{
+		return true;
+	}
+
+	return false;
+}

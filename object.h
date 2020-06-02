@@ -68,3 +68,5 @@ void moveSnake(SNAKE *snake);
 
 /* update the snake body based on its head */
 void UpdateBody(SNAKE *snake);
+
+bool isEven(int number);
