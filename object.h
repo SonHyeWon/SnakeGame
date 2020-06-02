@@ -53,6 +53,8 @@ bool isCollideBoundary(CELL snakePos, SCREEN* screen);
 
 bool isCollideBody(SNAKE* snake);
 
+void isCollideFruit(SNAKE* snake, FRUIT* fruit, SCREEN screen, int* score);
+
 bool isKeyInput(char* inputValue);
 
 void changeDirUp(SNAKE* snake);
