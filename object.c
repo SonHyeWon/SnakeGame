@@ -169,3 +169,24 @@ bool isEven(int number)
 
 	return false;
 }
+
+void createFruit(SCREEN screen, FRUIT* fruit) 
+{
+	CELL strP = screen.startPoint;
+	CELL endP = screen.endPoint;
+	int maxColorValue;
+	int tmpX; //for fruit->x
+	
+	tmpX = rand() % (endP.x - strP.x);
+	
+	if ( !isEven(tmpX) )
+	{
+		tmpX -= 1;
+	}
+
+	fruit->x = strP.x + tmpX;
+	fruit->y = strP.y + rand() % (endP.y - strP.y);
+	
+	maxColorValue = getMaxColorValue();
+	fruit->color = 1 + ( rand() % (maxColorValue - 1) );
+}

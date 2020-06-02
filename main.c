@@ -11,21 +11,17 @@
 int main()
 {
 	SNAKE	snake = { {{0, 4}, {0, 5}}, down, 2, 0 };
-	FRUIT	fruit = { 0, 0, 0 };
+	FRUIT	fruit;
 	SCREEN screen;
-	int	i, maxclr;
+	int	i;
 	char	inputValue = '\0', score[32];
 	bool	quit = false, checkInput = false;
 
 	createScreen(&screen);
-	maxclr = getMaxColorValue();
+	createFruit(screen, &fruit);
 
 	cursor(0);							/* hide the cursor back */
 	srand(time(NULL));					/* initialize random generator */
-
-	fruit.x = (rand() % screen.width) & ~1;		/* force x even and within [0, MAXX-1] */
-	fruit.y = 4 + rand() % (screen.height - 5);		/* y always within [4,MAXY-1] */
-	fruit.color = 1 + rand() % (maxclr - 1);	/* avoid color 0, since it's black */
 
 	do {
 		clrscr();					/* clear screen */
@@ -93,9 +89,7 @@ int main()
 			snake.length++;		/* it grows */
 			snake.score++;		/* and update the score */
 			/* regenerate a new fruit */
-			fruit.x = (rand() % screen.width) & ~1;
-			fruit.y = 4 + rand() % (screen.height - 5);
-			fruit.color = 1 + rand() % (maxclr - 1);
+			createFruit(screen, &fruit);
 		}
 
 		/* screen painting occurred here */
