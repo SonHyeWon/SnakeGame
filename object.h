@@ -51,4 +51,8 @@ bool isSamePosition(CELL* leftPos, CELL* rightPos);
 
 bool isCollideBoundary(CELL snakePos, SCREEN* screen);
 
+/* update the snake head and body */
+void moveSnake(SNAKE *snake);
+
+/* update the snake body based on its head */
 void UpdateBody(SNAKE *snake);

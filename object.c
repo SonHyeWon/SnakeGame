@@ -92,8 +92,12 @@ bool isCollideBoundary(CELL snakePos, SCREEN* screen)
     }
 }
 
+void moveSnake(SNAKE *snake)
+{
+	UpdateBody(snake);
+	//UpdateHead(snake);
+}
 
-/* update the snake body based on its head */
 void UpdateBody(SNAKE *snake) 
 {
 	int i;
