@@ -23,7 +23,7 @@ typedef struct snake
 	DIR	dir;
 	int		length;
 	int		score;
-} SNAKE; 
+} SNAKE;
 
 /* move the cursor to position (x,y) */
 void gotoxy(int x, int y);
@@ -63,3 +63,8 @@ void changeDirLeft(SNAKE* snake);
 
 void changeDirRight(SNAKE* snake);
 
+/* update the snake head and body */
+void moveSnake(SNAKE *snake);
+
+/* update the snake body based on its head */
+void UpdateBody(SNAKE *snake);

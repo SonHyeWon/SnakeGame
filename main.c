@@ -43,11 +43,6 @@ int main()
 		/* instructions */
 		writesat(30, 3, 11, "WASD: Move  Q: Quit");
 
-		/* update the snake body based on its head */
-		for (i = snake.length - 1; i > 0; i--) {
-			snake.body[i] = snake.body[i - 1];
-		}
-
 		/* keyboard handling */
 		checkInput = isKeyInput(&inputValue);
 		if (checkInput)
@@ -75,6 +70,8 @@ int main()
 				break;
 			}
 		}
+
+		moveSnake(&snake);
 
 		/* update the head's coordinates */
 		switch (snake.dir) {
@@ -117,3 +114,4 @@ int main()
 
 	return 0;
 }
+
