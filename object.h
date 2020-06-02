@@ -50,3 +50,5 @@ bool isSameValue(int leftValue, int rightValue);
 bool isSamePosition(CELL* leftPos, CELL* rightPos);
 
 bool isCollideBoundary(CELL snakePos, SCREEN* screen);
+
+bool isCollideBody(SNAKE* snake);

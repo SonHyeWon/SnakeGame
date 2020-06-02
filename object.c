@@ -91,4 +91,15 @@ bool isCollideBoundary(CELL snakePos, SCREEN* screen)
         return false;
     }
 }
-
+bool isCollideBody(SNAKE* snake)
+{
+     int i = 0;
+     for (i = 1; i < snake->length; i++)
+     {
+         if (isSamePosition(&snake->body[0], &snake->body[i]))
+         {
+             return true;
+         }
+     }
+     return false;
+}
