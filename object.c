@@ -111,7 +111,7 @@ void isCollideFruit(SNAKE* snake, FRUIT* fruit, SCREEN screen, int* score)
        	{
             snake->length++;     
             (*score)++;      
-            createFruit(fruit, screen);
+            createFruit(screen, fruit);
         }
 }
 
