@@ -10,7 +10,7 @@
 
 int main()
 {
-	SNAKE	snake = { {{0, 4}, {0, 5}}, down, 2, 0 };
+	SNAKE	snake;
 	FRUIT	fruit;
 	SCREEN screen;
 	int	i;
@@ -19,6 +19,7 @@ int main()
 
 	createScreen(&screen);
 	createFruit(screen, &fruit);
+	createSnake(screen, &snake);
 
 	cursor(0);							/* hide the cursor back */
 	srand(time(NULL));					/* initialize random generator */
