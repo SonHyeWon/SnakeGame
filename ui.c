@@ -45,11 +45,6 @@ int getMaxColorValue() {
 	return 16;
 }
 
-void clrscr()
-{
-	system("cls");
-}
-
 void writesat(int x, int y, int c, const char * s) {
 	gotoxy(x, y);
 	textcolor(c);
@@ -60,5 +55,19 @@ void clearLine(CELL clearPointCell, int length)
 {
 	COORD clearPoint = { clearPointCell.x, clearPointCell.y };
 	unsigned long tmp;
+
 	FillConsoleOutputCharacter(GetStdHandle(STD_OUTPUT_HANDLE), '\0', length, clearPoint, &tmp);
+}
+
+void clearGameScreen(SCREEN screen)
+{
+	int i;
+	CELL gameStartPoint = { screen.startPoint.x + 2, screen.startPoint.y + 1 };
+	CELL gameEndPoint = { screen.endPoint.x - 2, screen.endPoint.y - 1 };
+
+	for (i = gameStartPoint.y; i < gameEndPoint.y; i++)
+	{
+		CELL clearPoint = { gameStartPoint.x, i };
+		clearLine(clearPoint, gameEndPoint.x - gameStartPoint.x);
+	}
 }
