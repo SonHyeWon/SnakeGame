@@ -105,6 +105,16 @@ bool isCollideBody(SNAKE* snake)
 	return false;
 }
 
+void isCollideFruit(SNAKE* snake, FRUIT* fruit, SCREEN screen, int* score)
+{
+	if (isSamePosition(snake, fruit))
+       	{
+            snake->length++;     
+            (*score)++;      
+            createFruit(fruit, screen);
+        }
+}
+
 bool isKeyInput(char* inputValue)
 {
 	if (_kbhit())
