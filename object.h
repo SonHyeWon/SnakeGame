@@ -74,8 +74,11 @@ void moveSnake(SNAKE *snake);
 /* update the snake body based on its head */
 void UpdateBody(SNAKE *snake);
 
+void updateHead(SNAKE* snake);
+
 bool isEven(int number);
 
 void createFruit(SCREEN screen, FRUIT* fruit);
 
 void createSnake(SCREEN screen, SNAKE* snake);
+
