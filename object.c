@@ -194,8 +194,8 @@ void createFruit(SCREEN screen, FRUIT* fruit)
 		tmpX -= 1;
 	}
 
-	fruit->x = strP.x + tmpX;
-	fruit->y = strP.y + rand() % (endP.y - strP.y);
+	fruit->pos.x = strP.x + tmpX;
+	fruit->pos.y = strP.y + rand() % (endP.y - strP.y);
 	
 	maxColorValue = getMaxColorValue();
 	fruit->color = 1 + ( rand() % (maxColorValue - 1) );

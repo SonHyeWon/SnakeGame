@@ -86,7 +86,7 @@ int main()
 		if (snake.body[0].x > screen.width - 1) snake.body[0].x = 0;
 
 		/* snake eats fruits? */
-		if (snake.body[0].x == fruit.x && snake.body[0].y == fruit.y) {
+		if (snake.body[0].x == fruit.pos.x && snake.body[0].y == fruit.pos.y) {
 			snake.length++;		/* it grows */
 			snake.score++;		/* and update the score */
 			/* regenerate a new fruit */
@@ -94,7 +94,7 @@ int main()
 		}
 
 		/* screen painting occurred here */
-		writecat(fruit.x, fruit.y, fruit.color, FRUIT_SHAPE);			/* fruit */
+		writecat(fruit.pos.x, fruit.pos.y, fruit.color, FRUIT_SHAPE);			/* fruit */
 		writecat(snake.body[0].x, snake.body[0].y, 15, HEAD_SHAPE);	/* snake's head */
 		/* snake's body */
 		for (i = 1; i < snake.length; i++) {

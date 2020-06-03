@@ -11,7 +11,8 @@
 /* -- GAME LOGIC -- */
 typedef struct fruit
 {
-	int x, y, color;
+	CELL pos;
+	int color;
 } FRUIT;
 
 typedef enum direction
