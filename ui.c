@@ -55,3 +55,10 @@ void writesat(int x, int y, int c, const char * s) {
 	textcolor(c);
 	puts(s);
 }
+
+void clearLine(CELL clearPointCell, int length)
+{
+	COORD clearPoint = { clearPointCell.x, clearPointCell.y };
+	unsigned long tmp;
+	FillConsoleOutputCharacter(GetStdHandle(STD_OUTPUT_HANDLE), '\0', length, clearPoint, &tmp);
+}
