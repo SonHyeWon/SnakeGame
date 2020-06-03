@@ -68,6 +68,7 @@ void clearGameScreen(SCREEN screen)
 	for (i = gameStartPoint.y; i < gameEndPoint.y; i++)
 	{
 		CELL clearPoint = { gameStartPoint.x, i };
-		clearLine(clearPoint, gameEndPoint.x - gameStartPoint.x);
+		int eraseLength = gameEndPoint.x - gameStartPoint.x; 
+		clearLine(clearPoint, eraseLength);
 	}
 }
