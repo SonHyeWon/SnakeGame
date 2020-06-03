@@ -74,3 +74,5 @@ void UpdateBody(SNAKE *snake);
 bool isEven(int number);
 
 void createFruit(SCREEN screen, FRUIT* fruit);
+
+void createSnake(SCREEN screen, SNAKE* snake);
