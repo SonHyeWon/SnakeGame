@@ -68,15 +68,6 @@ int main()
 
 		moveSnake(&snake);
 
-		/* update the head's coordinates */
-		switch (snake.dir) {
-		case up: snake.body[0].y--; break;
-		case down: snake.body[0].y++; break;
-			/* x always a multiple of 2, since it was inited at 0 */
-		case left: snake.body[0].x -= 2; break;
-		case right: snake.body[0].x += 2; break;
-		}
-
 		/* wrap the snake at screen boundaries */
 		if (snake.body[0].y < 4)      snake.body[0].y = screen.height - 2;
 		if (snake.body[0].y > screen.height - 1) snake.body[0].y = 4;

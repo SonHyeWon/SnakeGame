@@ -107,7 +107,7 @@ bool isCollideBody(SNAKE* snake)
 
 void isCollideFruit(SNAKE* snake, FRUIT* fruit, SCREEN screen, int* score)
 {
-	if (isSamePosition(snake, fruit))
+	if (isSamePosition(&snake->body[0], &fruit->pos))
        	{
             snake->length++;     
             (*score)++;      
@@ -159,14 +159,34 @@ void changeDirRight(SNAKE* snake)
 
 void moveSnake(SNAKE *snake)
 {
-	UpdateBody(snake);
+	updateBody(snake);
+	updateHead(snake);
 }
 
-void UpdateBody(SNAKE *snake) 
+void updateBody(SNAKE *snake) 
 {
 	int i;
 	for (i = snake->length - 1; i > 0; i--) {
 		snake->body[i] = snake->body[i - 1];
+	}
+}
+
+void updateHead(SNAKE* snake)
+{
+	switch (snake->dir)
+	{
+	case up:
+		snake->body[0].y--;
+		break;
+	case down:
+		snake->body[0].y++;
+		break;
+	case left:
+		snake->body[0].x -= 2;
+		break;
+	case right:
+		snake->body[0].x += 2;
+		break;
 	}
 }
 

@@ -56,6 +56,7 @@ bool isCollideBoundary(CELL snakePos, SCREEN* screen);
 
 bool isCollideBody(SNAKE* snake);
 
+/* check the collision between the snake's head and the fruit */
 void isCollideFruit(SNAKE* snake, FRUIT* fruit, SCREEN screen, int* score);
 
 bool isKeyInput(char* inputValue);
@@ -72,10 +73,13 @@ void changeDirRight(SNAKE* snake);
 void moveSnake(SNAKE *snake);
 
 /* update the snake body based on its head */
-void UpdateBody(SNAKE *snake);
+void updateBody(SNAKE *snake);
+
+void updateHead(SNAKE* snake);
 
 bool isEven(int number);
 
 void createFruit(SCREEN screen, FRUIT* fruit);
 
 void createSnake(SCREEN screen, SNAKE* snake);
+
