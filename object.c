@@ -206,7 +206,12 @@ void createFruit(SCREEN screen, FRUIT* fruit)
 	CELL endP = screen.endPoint;
 	int maxColorValue;
 	int tmpX; //for fruit->x
-	
+
+	strP.x += 2;
+	strP.y += 1;
+	endP.x -= 2;
+	endP.y -= 1;
+
 	tmpX = rand() % (endP.x - strP.x);
 	
 	if ( !isEven(tmpX) )
