@@ -134,7 +134,7 @@ bool isDirLeftOrRight(SNAKE* snake)
 
 void changeDirUp(SNAKE* snake)
 {
-	if (snake->dir != down)
+	if (!isDirUpOrDown(snake))
 	{
 		snake->dir = up;
 	}
@@ -142,7 +142,7 @@ void changeDirUp(SNAKE* snake)
 
 void changeDirDown(SNAKE* snake)
 {
-	if (snake->dir != up)
+	if (!isDirUpOrDown(snake))
 	{
 		snake->dir = down;
 	}
@@ -150,7 +150,7 @@ void changeDirDown(SNAKE* snake)
 
 void changeDirLeft(SNAKE* snake)
 {
-	if (snake->dir != right)
+	if (!isDirLeftOrRight(snake))
 	{
 		snake->dir = left;
 	}
@@ -158,7 +158,7 @@ void changeDirLeft(SNAKE* snake)
 
 void changeDirRight(SNAKE* snake)
 {
-	if (snake->dir != left)
+	if (!isDirLeftOrRight(snake))
 	{
 		snake->dir = right;
 	}
