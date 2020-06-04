@@ -73,12 +73,6 @@ int getMaxColorValue() {
 	return 16;
 }
 
-void writesat(int x, int y, int c, const char * s) {
-	gotoxy(x, y);
-	textcolor(c);
-	puts(s);
-}
-
 void clearLine(CELL clearPointCell, int length)
 {
 	COORD clearPoint = { clearPointCell.x, clearPointCell.y };
