@@ -46,3 +46,6 @@ void clearGameScreen(SCREEN screen);
 
 /* display current score */
 void drawScore(int score);
+
+/* draw title, score zone, instructions */
+void drawUI(SCREEN screen);

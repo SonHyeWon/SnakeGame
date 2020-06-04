@@ -107,3 +107,29 @@ void drawScore(int score)
 	textcolor(SCORE_COLOR);
 	printf("%d", score);
 }
+
+void drawUI(SCREEN screen)
+{
+	CELL strP = screen.startPoint;
+	int i;
+	char ui[4][52] =
+	{
+		"   ____          __      ",
+		"  / __/__  ___ _/ /_____ ",
+		" _\\ \\/ _ \\/ _ `/  '_/ -_)   SCORE: ",
+		"/___/_//_/\\_,_/_/\\_\\\\__/    WASD: Move  Q: Quit"
+	};
+
+	for (i = 0; i < 4; i++)
+	{
+		printf("%s\n", ui + i);
+	}
+
+	textcolor(15);
+
+	for (i = 0; i < 24; i++)
+	{
+		gotoxy(strP.x, strP.y + i);
+		printf("%s\n", mapArray + i);
+	}
+}

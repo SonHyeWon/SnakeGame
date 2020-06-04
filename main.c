@@ -24,18 +24,11 @@ int main()
 	cursor(0);							/* hide the cursor back */
 	srand(time(NULL));					/* initialize random generator */
 
+	drawUI(screen);
+
 	do {
-		writesat(0, 0, 15, "   ____          __      ");
-		writesat(0, 1, 15, "  / __/__  ___ _/ /_____ ");
-		writesat(0, 2, 7, " _\\ \\/ _ \\/ _ `/  '_/ -_)");
-		writesat(0, 3, 8, "/___/_//_/\\_,_/_/\\_\\\\__/ ");
-
 		/* display score */
-		writesat(30, 2, 15, "SCORE:");
 		drawScore(score);
-
-		/* instructions */
-		writesat(30, 3, 11, "WASD: Move  Q: Quit");
 
 		/* keyboard handling */
 		checkInput = isKeyInput(&inputValue);
