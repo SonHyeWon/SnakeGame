@@ -234,3 +234,14 @@ void drawChar(CELL pos, int color, const char character) {
 	textcolor(color);
 	putchar(character);
 }
+
+void drawObjects(SNAKE snake, FRUIT fruit) 
+{
+	int i;
+
+	drawChar(fruit.pos, fruit.color, FRUIT_SHAPE);			/* fruit */
+	drawChar(snake.body[0], HEAD_COLOR, HEAD_SHAPE);		/* snake's head */
+	for (i = 1; i < snake.length; i++) {
+		drawChar(snake.body[i], BODY_COLOR, BODY_SHAPE);	/* snake's body */
+	}
+}
