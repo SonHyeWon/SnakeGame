@@ -202,15 +202,10 @@ bool isEven(int number)
 
 void createFruit(SCREEN screen, FRUIT* fruit) 
 {
-	CELL strP = screen.startPoint;
-	CELL endP = screen.endPoint;
+	CELL strP = { screen.startPoint.x + 2, screen.startPoint.y + 1 };
+	CELL endP = { screen.endPoint.x - 2, screen.endPoint.y - 1 };
 	int maxColorValue;
 	int tmpX; //for fruit->x
-
-	strP.x += 2;
-	strP.y += 1;
-	endP.x -= 2;
-	endP.y -= 1;
 
 	tmpX = rand() % (endP.x - strP.x);
 	
