@@ -11,12 +11,6 @@ void gotoxy(int x, int y) {
 	SetConsoleCursorPosition(hConsoleOutput, Cursor_an_Pos);
 }
 
-void writecat(int x, int y, int c, const char ch) {
-	gotoxy(x, y);
-	textcolor(c);
-	putchar(ch);
-}
-
 void hline(int x, int y, int w, int c) {
 	int i;
 	writecat(x, y, c, '+');
@@ -233,4 +227,10 @@ void createSnake(SCREEN screen, SNAKE* snake)
 
 	snake->dir = right;
 	snake->length = 2;
+}
+
+void drawChar(CELL pos, int color, const char character) {
+	gotoxy(pos.x, pos.y);
+	textcolor(color);
+	putchar(character);
 }

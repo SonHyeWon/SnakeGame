@@ -30,9 +30,6 @@ typedef struct snake
 /* move the cursor to position (x,y) */
 void gotoxy(int x, int y);
 
-/* display a character at position (x,y) using color c */
-void writecat(int x, int y, int c, const char ch);
-
 /* draw a horizontal line of with w at position (x,y), using color c */
 void hline(int x, int y, int w, int c);
 
@@ -81,4 +78,7 @@ bool isEven(int number);
 void createFruit(SCREEN screen, FRUIT* fruit);
 
 void createSnake(SCREEN screen, SNAKE* snake);
+
+/* draw one single 'character' at desired position 'pos' using 'color'*/
+void drawChar(CELL pos, int color, const char ch);
 
