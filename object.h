@@ -55,6 +55,10 @@ bool isDirLeft(SNAKE* snake);
 
 bool isDirRight(SNAKE* snake);
 
+bool isDirUpOrDown(SNAKE* snake);
+
+bool isDirLeftOrRight(SNAKE* snake);
+
 void changeDirUp(SNAKE* snake);
 
 void changeDirDown(SNAKE* snake);

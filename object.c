@@ -122,6 +122,16 @@ bool isDirRight(SNAKE* snake)
 	return false;
 }
 
+bool isDirUpOrDown(SNAKE* snake)
+{
+	return (isDirUp(snake) || isDown(snake));
+}
+
+bool isDirLeftOrRight(SNAKE* snake)
+{
+	return (isDirLeft(snake) || isRight(snake));
+}
+
 void changeDirUp(SNAKE* snake)
 {
 	if (snake->dir != down)
