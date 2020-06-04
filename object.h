@@ -25,7 +25,6 @@ typedef struct snake
 	CELL	body[MAX_LENGTH];
 	DIR	dir;
 	int		length;
-	int		score;
 } SNAKE;
 
 /* move the cursor to position (x,y) */

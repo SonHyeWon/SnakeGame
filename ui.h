@@ -1,5 +1,7 @@
 #pragma once
 
+#define SCORE_COLOR 15
+
 typedef struct cell
 {
     int x, y;
@@ -42,3 +44,5 @@ void clearLine(CELL clearPointCell, int length);
 /* clear the game space */
 void clearGameScreen(SCREEN screen);
 
+/* display current score */
+void drawScore(int score);

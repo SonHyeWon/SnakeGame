@@ -233,5 +233,4 @@ void createSnake(SCREEN screen, SNAKE* snake)
 
 	snake->dir = right;
 	snake->length = 2;
-	snake->score = 0; //This will be deleted after drawUI()
 }

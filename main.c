@@ -13,8 +13,8 @@ int main()
 	SNAKE	snake;
 	FRUIT	fruit;
 	SCREEN screen;
-	int	i;
-	char	inputValue = '\0', score[32];
+	int	i, score = 0;
+	char	inputValue = '\0';
 	bool	quit = false, checkInput = false;
 
 	createScreen(&screen);
@@ -32,8 +32,7 @@ int main()
 
 		/* display score */
 		writesat(30, 2, 15, "SCORE:");
-		sprintf(score, "%d", snake.score);
-		writesat(37, 2, 7, score);
+		drawScore(score);
 
 		/* instructions */
 		writesat(30, 3, 11, "WASD: Move  Q: Quit");
@@ -77,7 +76,7 @@ int main()
 		/* snake eats fruits? */
 		if (snake.body[0].x == fruit.pos.x && snake.body[0].y == fruit.pos.y) {
 			snake.length++;		/* it grows */
-			snake.score++;		/* and update the score */
+			score++;		/* and update the score */
 			/* regenerate a new fruit */
 			createFruit(screen, &fruit);
 		}
