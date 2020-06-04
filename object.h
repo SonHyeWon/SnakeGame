@@ -72,7 +72,7 @@ void changeDirRight(SNAKE* snake);
 void moveSnake(SNAKE *snake);
 
 /* update the snake body based on its head */
-void UpdateBody(SNAKE *snake);
+void updateBody(SNAKE *snake);
 
 void updateHead(SNAKE* snake);
 

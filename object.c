@@ -159,11 +159,11 @@ void changeDirRight(SNAKE* snake)
 
 void moveSnake(SNAKE *snake)
 {
-	UpdateBody(snake);
+	updateBody(snake);
 	updateHead(snake);
 }
 
-void UpdateBody(SNAKE *snake) 
+void updateBody(SNAKE *snake) 
 {
 	int i;
 	for (i = snake->length - 1; i > 0; i--) {
