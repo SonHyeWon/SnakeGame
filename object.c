@@ -58,7 +58,7 @@ void dialog(int x, int y, int w, int h, int c, const char * title) {
 
 bool rightMax(int a, int b)
 {
-	return (a < b);
+	return (a <= b);
 }
 bool isSameValue(int leftValue, int rightValue)
 {
@@ -168,50 +168,4 @@ void UpdateBody(SNAKE *snake)
 	for (i = snake->length - 1; i > 0; i--) {
 		snake->body[i] = snake->body[i - 1];
 	}
-}
-
-bool isEven(int number)
-{
-	if (number % 2 == 0)
-	{
-		return true;
-	}
-
-	return false;
-}
-
-void createFruit(SCREEN screen, FRUIT* fruit) 
-{
-	CELL strP = screen.startPoint;
-	CELL endP = screen.endPoint;
-	int maxColorValue;
-	int tmpX; //for fruit->x
-	
-	tmpX = rand() % (endP.x - strP.x);
-	
-	if ( !isEven(tmpX) )
-	{
-		tmpX -= 1;
-	}
-
-	fruit->pos.x = strP.x + tmpX;
-	fruit->pos.y = strP.y + rand() % (endP.y - strP.y);
-	
-	maxColorValue = getMaxColorValue();
-	fruit->color = 1 + ( rand() % (maxColorValue - 1) );
-}
-
-void createSnake(SCREEN screen, SNAKE* snake)
-{
-	int centerX = ( (screen.endPoint.x + screen.startPoint.x) / 2);
-	int centerY = ( (screen.endPoint.y + screen.startPoint.y) / 2);
-	CELL center = { centerX, centerY };
-
-	snake->body[0] = center;
-	center.x -= 2;
-	snake->body[1] = center;
-
-	snake->dir = right;
-	snake->length = 2;
-	snake->score = 0; //This will be deleted after drawUI()
 }
