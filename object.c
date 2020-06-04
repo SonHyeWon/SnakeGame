@@ -19,7 +19,7 @@ void writecat(int x, int y, int c, const char ch) {
 
 bool rightMax(int a, int b)
 {
-	return (a < b);
+	return (a <= b);
 }
 bool isSameValue(int leftValue, int rightValue)
 {
@@ -195,3 +195,4 @@ void createSnake(SCREEN screen, SNAKE* snake)
 	snake->dir = right;
 	snake->length = 2;
 }
+
