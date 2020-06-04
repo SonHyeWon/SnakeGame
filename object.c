@@ -58,7 +58,7 @@ void dialog(int x, int y, int w, int h, int c, const char * title) {
 
 bool rightMax(int a, int b)
 {
-	return (a < b);
+	return (a <= b);
 }
 bool isSameValue(int leftValue, int rightValue)
 {
@@ -234,3 +234,4 @@ void createSnake(SCREEN screen, SNAKE* snake)
 	snake->dir = right;
 	snake->length = 2;
 }
+
