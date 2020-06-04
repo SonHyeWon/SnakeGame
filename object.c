@@ -107,7 +107,7 @@ bool isCollideBody(SNAKE* snake)
 
 void isCollideFruit(SNAKE* snake, FRUIT* fruit, SCREEN screen, int* score)
 {
-	if (isSamePosition(snake, fruit))
+	if (isSamePosition(&snake->body[0], &fruit->pos))
        	{
             snake->length++;     
             (*score)++;      

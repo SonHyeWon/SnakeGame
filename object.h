@@ -56,6 +56,7 @@ bool isCollideBoundary(CELL snakePos, SCREEN* screen);
 
 bool isCollideBody(SNAKE* snake);
 
+/* check the collision between the snake's head and the fruit */
 void isCollideFruit(SNAKE* snake, FRUIT* fruit, SCREEN screen, int* score);
 
 bool isKeyInput(char* inputValue);

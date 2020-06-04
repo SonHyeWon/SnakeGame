@@ -25,8 +25,6 @@ int main()
 	srand(time(NULL));					/* initialize random generator */
 
 	do {
-		clrscr();					/* clear screen */
-
 		writesat(0, 0, 15, "   ____          __      ");
 		writesat(0, 1, 15, "  / __/__  ___ _/ /_____ ");
 		writesat(0, 2, 7, " _\\ \\/ _ \\/ _ `/  '_/ -_)");
@@ -84,6 +82,8 @@ int main()
 			createFruit(screen, &fruit);
 		}
 
+		clearGameScreen(screen);
+
 		/* screen painting occurred here */
 		writecat(fruit.pos.x, fruit.pos.y, fruit.color, FRUIT_SHAPE);			/* fruit */
 		writecat(snake.body[0].x, snake.body[0].y, 15, HEAD_SHAPE);	/* snake's head */
@@ -96,8 +96,6 @@ int main()
 	} while (!quit);
 
 	cursor(1);					/* turn the cursor back on */
-	clrscr();
 
 	return 0;
 }
-
