@@ -125,6 +125,42 @@ bool isKeyInput(char* inputValue)
 	return false;
 }
 
+bool isDirUp(SNAKE* snake)
+{
+	if (snake->dir == up)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool isDirDown(SNAKE* snake)
+{
+	if (snake->dir == down)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool isDirLeft(SNAKE* snake)
+{
+	if (snake->dir == left)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool isDirRight(SNAKE* snake)
+{
+	if (snake->dir == right)
+	{
+		return true;
+	}
+	return false;
+}
+
 void changeDirUp(SNAKE* snake)
 {
 	if (snake->dir != down)

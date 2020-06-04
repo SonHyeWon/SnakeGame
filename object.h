@@ -60,6 +60,14 @@ void isCollideFruit(SNAKE* snake, FRUIT* fruit, SCREEN screen, int* score);
 
 bool isKeyInput(char* inputValue);
 
+bool isDirUp(SNAKE* snake);
+
+bool isDirDown(SNAKE* snake);
+
+bool isDirLeft(SNAKE* snake);
+
+bool isDirRight(SNAKE* snake);
+
 void changeDirUp(SNAKE* snake);
 
 void changeDirDown(SNAKE* snake);
