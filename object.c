@@ -252,5 +252,7 @@ void drawObjects(SNAKE snake, FRUIT fruit)
 	}
 	drawChar(snake.body[0], HEAD_COLOR, HEAD_SHAPE);		/* snake's head */
 	drawChar(fruit.pos, fruit.color, FRUIT_SHAPE);			/* fruit */
+
+	textcolor(15);							/* back to normal color */
 }
 
