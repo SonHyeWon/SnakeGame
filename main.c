@@ -60,11 +60,16 @@ int main()
 
 		moveSnake(&snake);
 
-		quit = isCollideBoundary(snake.body[0], &screen);
+		if(quit == false)
+		{
+			quit = isCollideBoundary(snake.body[0], &screen);
+		}
+
 		if (quit == false)
 		{
 			quit = isCollideBody(&snake);
 		}
+
                 isCollideFruit(&snake, &fruit, screen, &score);
 
 		clearGameScreen(screen);
