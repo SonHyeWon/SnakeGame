@@ -72,7 +72,11 @@ int main()
 
                 isCollideFruit(&snake, &fruit, screen, &score);
 
-		clearGameScreen(screen);
+		/* clear the game space */
+		if (quit == false)
+		{
+			clearGameScreen(screen);
+		}
 
 		/* screen painting occurred here */
 		drawObjects(snake, fruit);
