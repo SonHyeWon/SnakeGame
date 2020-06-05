@@ -70,8 +70,9 @@ void writecat(int x, int y, int c, const char ch) {
 	{
 		if (isSamePosition(&snake->body[0], &fruit->pos))
 		{
-			snake->length++;
-			(*score)++;
+			snake->length++;	/* it grows */
+			(*score)++;		/* and update the score */
+			/* regenerate a new fruit */
 			createFruit(screen, fruit);
 		}
 	}
