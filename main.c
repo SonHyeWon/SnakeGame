@@ -60,11 +60,8 @@ int main()
 
 		moveSnake(&snake);
 
-		/* wrap the snake at screen boundaries */
-		if (snake.body[0].y < 4)      snake.body[0].y = screen.height - 2;
-		if (snake.body[0].y > screen.height - 1) snake.body[0].y = 4;
-		if (snake.body[0].x < 0)      snake.body[0].x = screen.width - 2;
-		if (snake.body[0].x > screen.width - 1) snake.body[0].x = 0;
+		quit = isCollideBoundary(snake.body[0], &screen);
+
 
 		/* snake eats fruits? */
 		if (snake.body[0].x == fruit.pos.x && snake.body[0].y == fruit.pos.y) {
