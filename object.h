@@ -30,8 +30,6 @@ typedef struct snake
 /* move the cursor to position (x,y) */
 void gotoxy(int x, int y);
 
-void writecat(int x, int y, int c, const char ch);
-
 bool rightMax(int a, int b);
 
 bool isSameValue(int leftValue, int rightValue);

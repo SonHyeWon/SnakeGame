@@ -70,7 +70,7 @@ void clearGameScreen(SCREEN screen)
 void drawScore(int score) 
 {
 	gotoxy(37, 2);
-	textcolor(SCORE_COLOR);
+	textcolor(TEXT_COLOR);
 	printf("%d", score);
 }
 
