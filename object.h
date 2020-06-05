@@ -7,6 +7,7 @@
 #define	FRUIT_SHAPE	'#'
 #define	HEAD_COLOR	15
 #define	BODY_COLOR	8
+#define QUIT_COLOR	12
 
 /* -- GAME LOGIC -- */
 typedef struct fruit

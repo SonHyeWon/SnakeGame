@@ -248,7 +248,7 @@ void drawObjects(SNAKE snake, FRUIT fruit, int quit)
 	int i;
 	if (quit) 
 	{
-		drawChar(snake.body[1], 12, HEAD_SHAPE);		/* dead snake's head */
+		drawChar(snake.body[1], QUIT_COLOR, HEAD_SHAPE);	/* dead snake's head */
 		textcolor(TEXT_COLOR);					/* back to normal color */
 		return;
 	}
