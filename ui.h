@@ -15,8 +15,6 @@ typedef struct screenInfo
 	int height;
 }SCREEN;
 
-extern char mapArray[24][120];
-
 /* hide/show cursor */
 void cursor(int visible);
 
