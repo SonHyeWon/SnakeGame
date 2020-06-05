@@ -75,12 +75,7 @@ int main()
 		clearGameScreen(screen);
 
 		/* screen painting occurred here */
-		writecat(fruit.pos.x, fruit.pos.y, fruit.color, FRUIT_SHAPE);			/* fruit */
-		writecat(snake.body[0].x, snake.body[0].y, 15, HEAD_SHAPE);	/* snake's head */
-		/* snake's body */
-		for (i = 1; i < snake.length; i++) {
-			writecat(snake.body[i].x, snake.body[i].y, 8, BODY_SHAPE);
-		}
+		drawObjects(snake, fruit);
 
 		Sleep(50);				/* slow down a bit */
 	} while (!quit);
