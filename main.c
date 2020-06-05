@@ -61,15 +61,7 @@ int main()
 		moveSnake(&snake);
 
 		quit = isCollideBoundary(snake.body[0], &screen);
-
-
-		/* snake eats fruits? */
-		if (snake.body[0].x == fruit.pos.x && snake.body[0].y == fruit.pos.y) {
-			snake.length++;		/* it grows */
-			score++;		/* and update the score */
-			/* regenerate a new fruit */
-			createFruit(screen, &fruit);
-		}
+                isCollideFruit(&snake, &fruit, screen, &score);
 
 		clearGameScreen(screen);
 
