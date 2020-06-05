@@ -94,6 +94,7 @@ void drawUI(SCREEN screen)
 
 	textcolor(15);
 
+	/* draw horiaontal line of boundary */
 	for (i = strP.x + 1; i < endP.x - 2; i++)
 	{
 		gotoxy(i, strP.y);
@@ -102,6 +103,7 @@ void drawUI(SCREEN screen)
 		printf("%c", '-');
 	}
 
+	/* draw vertical line of boundary */
 	for (i = strP.y + 1; i < endP.y - 1; i++)
 	{
 		gotoxy(strP.x, i);
@@ -110,6 +112,7 @@ void drawUI(SCREEN screen)
 		printf("%c", '|');
 	}
 
+	/* draw edge of boundary */
 	gotoxy(strP.x, strP.y);
 	printf("%c", '+');
 	gotoxy(strP.x, endP.y - 1);
