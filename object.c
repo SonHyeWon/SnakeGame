@@ -35,7 +35,7 @@ bool isCollideBoundary(CELL snakePos, SCREEN* screen)
 	{
 		return true;
 	}
-	else if (rightMax(screen->endPoint.y, snakePos.y))
+	else if (rightMax(screen->endPoint.y - 1, snakePos.y))
 	{
 		return true;
 	}
@@ -43,7 +43,7 @@ bool isCollideBoundary(CELL snakePos, SCREEN* screen)
 	{
 		return true;
 	}
-	else if (rightMax(screen->endPoint.x, snakePos.x))
+	else if (rightMax(screen->endPoint.x - 3, snakePos.x))
 	{
 		return true;
 	}
