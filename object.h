@@ -85,13 +85,13 @@ void updateBody(SNAKE *snake);
 /* update position of snake's head */
 void updateHead(SNAKE* snake);
 
-/* Check if number is even. Return true for even number */
+/* check if number is even. Return true for even number */
 bool isEven(int number);
 
-/* Initiate and generate structure fruit using screen information */
+/* initiate and generate structure fruit using screen information */
 void createFruit(SCREEN screen, FRUIT* fruit);
 
-/* Initiate and generate structure snake using screen information */
+/* initiate and generate structure snake using screen information */
 void createSnake(SCREEN screen, SNAKE* snake);
 
 /* draw one single 'character' at desired position 'pos' using 'color'*/
