@@ -1,6 +1,6 @@
 #pragma once
 
-#define SCORE_COLOR 15
+#define TEXT_COLOR 15
 
 typedef struct cell
 {
