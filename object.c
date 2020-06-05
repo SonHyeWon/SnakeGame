@@ -11,12 +11,6 @@ void gotoxy(int x, int y) {
 	SetConsoleCursorPosition(hConsoleOutput, Cursor_an_Pos);
 }
 
-void writecat(int x, int y, int c, const char ch) {
-	gotoxy(x, y);
-	textcolor(c);
-	putchar(ch);
-}
-
 	bool rightMax(int a, int b)
 	{
 		return (a <= b);
