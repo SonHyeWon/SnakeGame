@@ -59,17 +59,17 @@ int main()
 		}
 
 		moveSnake(&snake);
-
-		if(quit == false)
+		/* wrap the snake at screen boundaries */
+		if(quit == false) 
 		{
 			quit = isCollideBoundary(snake.body[0], &screen);
 		}
-
+		/* snake collides with itself? */
 		if (quit == false)
 		{
 			quit = isCollideBody(&snake);
 		}
-
+		/* snake eats fruits? */
                 isCollideFruit(&snake, &fruit, screen, &score);
 
 		clearGameScreen(screen);
