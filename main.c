@@ -86,6 +86,7 @@ int main()
 	} while (!quit);
 
 	cursor(1);					/* turn the cursor back on */
-
+	gotoxy(0, screen.height-1);
+	
 	return 0;
 }
