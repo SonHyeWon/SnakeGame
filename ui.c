@@ -77,6 +77,7 @@ void drawScore(int score)
 void drawUI(SCREEN screen)
 {
 	CELL strP = screen.startPoint;
+	CELL endP = screen.endPoint;
 	int i;
 	char ui[4][52] =
 	{
@@ -92,5 +93,30 @@ void drawUI(SCREEN screen)
 	}
 
 	textcolor(15);
+
+	for (i = strP.x + 1; i < endP.x - 1; i++)
+	{
+		gotoxy(i, strP.y);
+		printf("%c", '-');
+		gotoxy(i, endP.y - 1);
+		printf("%c", '-');
+	}
+
+	for (i = strP.y + 1; i < endP.y - 1; i++)
+	{
+		gotoxy(strP.x, i);
+		printf("%c", '|');
+		gotoxy(endP.x - 1, i);
+		printf("%c", '|');
+	}
+
+	gotoxy(strP.x, strP.y);
+	printf("%c", '+');
+	gotoxy(strP.x, endP.y - 1);
+	printf("%c", '+');
+	gotoxy(endP.x - 1, strP.y);
+	printf("%c", '+');
+	gotoxy(endP.x - 1, endP.y - 1);
+	printf("%c", '+');
 }
 
