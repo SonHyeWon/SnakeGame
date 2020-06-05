@@ -94,7 +94,7 @@ void drawUI(SCREEN screen)
 
 	textcolor(15);
 
-	for (i = strP.x + 1; i < endP.x - 1; i++)
+	for (i = strP.x + 1; i < endP.x - 2; i++)
 	{
 		gotoxy(i, strP.y);
 		printf("%c", '-');
@@ -106,7 +106,7 @@ void drawUI(SCREEN screen)
 	{
 		gotoxy(strP.x, i);
 		printf("%c", '|');
-		gotoxy(endP.x - 1, i);
+		gotoxy(endP.x - 2, i);
 		printf("%c", '|');
 	}
 
@@ -114,9 +114,9 @@ void drawUI(SCREEN screen)
 	printf("%c", '+');
 	gotoxy(strP.x, endP.y - 1);
 	printf("%c", '+');
-	gotoxy(endP.x - 1, strP.y);
+	gotoxy(endP.x - 2, strP.y);
 	printf("%c", '+');
-	gotoxy(endP.x - 1, endP.y - 1);
+	gotoxy(endP.x - 2, endP.y - 1);
 	printf("%c", '+');
 }
 
