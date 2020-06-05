@@ -124,12 +124,12 @@ bool isDirRight(SNAKE* snake)
 
 bool isDirUpOrDown(SNAKE* snake)
 {
-	return (isDirUp(snake) || isDown(snake));
+	return (isDirUp(snake) || isDirDown(snake));
 }
 
 bool isDirLeftOrRight(SNAKE* snake)
 {
-	return (isDirLeft(snake) || isRight(snake));
+	return (isDirLeft(snake) || isDirRight(snake));
 }
 
 void changeDirUp(SNAKE* snake)
