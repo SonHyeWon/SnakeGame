@@ -35,9 +35,6 @@ void createScreen(SCREEN* screen);
 /* returns the total number of color supported */
 int getMaxColorValue();
 
-/* display a string at position (x,y) using color c */
-void writesat(int x, int y, int c, const char * s);
-
 /* clear one line from 'clearpointCell' by 'length'*/
 void clearLine(CELL clearPointCell, int length);
 
