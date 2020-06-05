@@ -45,26 +45,37 @@ bool isCollideBody(SNAKE* snake);
 /* check the collision between the snake's head and the fruit */
 void isCollideFruit(SNAKE* snake, FRUIT* fruit, SCREEN screen, int* score);
 
+/* check if there is keyboard input */
 bool isKeyInput(char* inputValue);
 
+/* check if snake's direction is up */
 bool isDirUp(SNAKE* snake);
 
+/* check if snake's direction is down */
 bool isDirDown(SNAKE* snake);
 
+/* check if snake's direction is left */
 bool isDirLeft(SNAKE* snake);
 
+/* check if snake's direction is right */
 bool isDirRight(SNAKE* snake);
 
+/* check if snake's direction is up or down */
 bool isDirUpOrDown(SNAKE* snake);
 
+/* check if snake's direction is left or right */
 bool isDirLeftOrRight(SNAKE* snake);
 
+/* change snake's direction to up */
 void changeDirUp(SNAKE* snake);
 
+/* change snake's direction to down */
 void changeDirDown(SNAKE* snake);
 
+/* change snake's direction to left */
 void changeDirLeft(SNAKE* snake);
 
+/* change snake's direction to right */
 void changeDirRight(SNAKE* snake);
 
 /* update the snake head and body */
@@ -73,6 +84,7 @@ void moveSnake(SNAKE *snake);
 /* update the snake body based on its head */
 void updateBody(SNAKE *snake);
 
+/* update position of snake's head */
 void updateHead(SNAKE* snake);
 
 /* Check if number is even. Return true for even number */
