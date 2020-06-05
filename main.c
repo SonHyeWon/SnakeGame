@@ -17,7 +17,7 @@ int main()
 	char	inputValue = '\0';
 	bool	quit = false, checkInput = false;
 
-	/* Initiate strunctures */
+	/* initiate strunctures */
 	createScreen(&screen);
 	createFruit(screen, &fruit);
 	createSnake(screen, &snake);
