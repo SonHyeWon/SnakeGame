@@ -84,5 +84,5 @@ void createSnake(SCREEN screen, SNAKE* snake);
 void drawChar(CELL pos, int color, const char ch);
 
 /* draw snake and fruit into screen. need to check whether the game ends */
-void drawObjects(SNAKE snake, FRUIT fruit, int quit);
+void drawObjects(SNAKE snake, FRUIT fruit, bool quit);
 

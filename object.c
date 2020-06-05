@@ -243,10 +243,10 @@ void drawChar(CELL pos, int color, const char character)
 	putchar(character);
 }
 
-void drawObjects(SNAKE snake, FRUIT fruit, int quit)
+void drawObjects(SNAKE snake, FRUIT fruit, bool quit)
 {
 	int i;
-	if (quit) 
+	if (quit == true) 
 	{
 		drawChar(snake.body[1], QUIT_COLOR, HEAD_SHAPE);	/* dead snake's head */
 		textcolor(TEXT_COLOR);					/* back to normal color */
