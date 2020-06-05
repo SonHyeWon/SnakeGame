@@ -31,17 +31,17 @@ int main()
 		/* draw score next to score zone */
 		drawScore(score);
 
-		/* keyboard handling */
+		/* check and receive keyboard input */
 		checkInput = isKeyInput(&inputValue);
 		if (checkInput)
 		{
-			switch (inputValue) {			/* and process it */
+			switch (inputValue) {
 			/* ESC, Q: quit game */
 			case 27:
 			case 'Q':
 				quit = true;
 				break;
-				/* W: Up, S: Down, A: Left, D: Right */
+			/* W: Up, S: Down, A: Left, D: Right */
 			case 'W':
 				changeDirUp(&snake);
 				break;
@@ -59,6 +59,7 @@ int main()
 			}
 		}
 
+		/* move snake's head and body */
 		moveSnake(&snake);
 		/* wrap the snake at screen boundaries */
 		if(quit == false) 
