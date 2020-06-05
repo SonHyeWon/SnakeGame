@@ -17,6 +17,7 @@ int main()
 	char	inputValue = '\0';
 	bool	quit = false, checkInput = false;
 
+	/* Initiate strunctures */
 	createScreen(&screen);
 	createFruit(screen, &fruit);
 	createSnake(screen, &snake);
@@ -27,7 +28,7 @@ int main()
 	drawUI(screen);
 
 	do {
-		/* display score */
+		/* draw score next to score zone */
 		drawScore(score);
 
 		/* keyboard handling */
