@@ -37,9 +37,9 @@ bool rightMax(int a, int b);
 bool isSameValue(int leftValue, int rightValue);
 
 bool isSamePosition(CELL* leftPos, CELL* rightPos);
-
+/* check the collision between the snake's head and the boundaries */
 bool isCollideBoundary(CELL snakePos, SCREEN* screen);
-
+/* check the collision between the snake's head and the snake's body */
 bool isCollideBody(SNAKE* snake);
 
 /* check the collision between the snake's head and the fruit */
