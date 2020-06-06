@@ -77,10 +77,14 @@ int main()
 		/* snake eats fruits? */
                 isCollideFruit(&snake, &fruit, screen, &score);
 
-		clearGameScreen(screen);
+		/* clear the game space */
+		if (quit == false)
+		{
+			clearGameScreen(screen);
+		}
 
 		/* screen painting occurred here */
-		drawObjects(snake, fruit);
+		drawObjects(snake, fruit, quit);
 
 		Sleep(50);				/* slow down a bit */
 	} while (!quit);
