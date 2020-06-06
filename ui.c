@@ -3,15 +3,18 @@
 #include "ui.h"
 #pragma once
 
-void cursor(int visible) {
+void cursor(int visible) 
+{
 	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
 	CONSOLE_CURSOR_INFO cursor = { 1, visible };
+
 	SetConsoleCursorInfo(handle, &cursor);
 }
 
-void textcolor(int x) {
-	HANDLE color;
-	color = GetStdHandle(STD_OUTPUT_HANDLE);
+void textcolor(int x) 
+{
+	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
+
 	SetConsoleTextAttribute(color, x);
 }
 
@@ -47,8 +50,8 @@ int getMaxColorValue() {
 
 void clearLine(CELL clearPointCell, int length)
 {
-	COORD clearPoint = { clearPointCell.x, clearPointCell.y };
 	unsigned long tmp;
+	COORD clearPoint = { clearPointCell.x, clearPointCell.y };
 
 	FillConsoleOutputCharacter(GetStdHandle(STD_OUTPUT_HANDLE), '\0', length, clearPoint, &tmp);
 }
@@ -56,13 +59,15 @@ void clearLine(CELL clearPointCell, int length)
 void clearGameScreen(SCREEN screen)
 {
 	int i;
+	CELL clearPoint;
 	CELL gameStartPoint = { screen.startPoint.x + 2, screen.startPoint.y + 1 };
 	CELL gameEndPoint = { screen.endPoint.x - 2, screen.endPoint.y - 1 };
+	int eraseLength = gameEndPoint.x - gameStartPoint.x;
 
 	for (i = gameStartPoint.y; i < gameEndPoint.y; i++)
 	{
-		CELL clearPoint = { gameStartPoint.x, i };
-		int eraseLength = gameEndPoint.x - gameStartPoint.x; 
+		clearPoint.x = gameStartPoint.x;
+		clearPoint.y = i;
 		clearLine(clearPoint, eraseLength);
 	}
 }
