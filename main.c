@@ -12,8 +12,8 @@ int main()
 {
 	SNAKE	snake;
 	FRUIT	fruit;
-	SCREEN screen;
-	int	i, score = 0;
+	SCREEN  screen;
+	int	score = 0;
 	char	inputValue = '\0';
 	bool	quit = false, checkInput = false;
 
