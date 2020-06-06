@@ -17,14 +17,17 @@ bool rightMax(int a, int b)
 {
 	return (a <= b);
 }
+
 bool isSameValue(int leftValue, int rightValue)
 {
 	return (leftValue == rightValue);
 }
+
 bool isSamePosition(CELL* leftPos, CELL* rightPos)
 {
 	return (isSameValue(leftPos->x, rightPos->x) && isSameValue(leftPos->y, rightPos->y));
 }
+
 bool isCollideBoundary(CELL snakePos, SCREEN* screen)
 {
 	if (rightMax(snakePos.y, screen->startPoint.y))
@@ -52,6 +55,7 @@ bool isCollideBoundary(CELL snakePos, SCREEN* screen)
 bool isCollideBody(SNAKE* snake)
 {
 	int i = 0;
+
 	for (i = 1; i < snake->length; i++)
 	{
 		if (isSamePosition(&snake->body[0], &snake->body[i]))
