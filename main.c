@@ -70,7 +70,7 @@ int main()
 			quit = isCollideBody(&snake);
 		}
 
-                isCollideFruit(&snake, &fruit, screen, &score);
+		isCollideFruit(&snake, &fruit, screen, &score);
 
 		/* clear the game space */
 		if (quit == false)
