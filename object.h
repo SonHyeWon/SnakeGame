@@ -30,13 +30,18 @@ typedef struct snake
 /* move the cursor to position (x,y) */
 void gotoxy(int x, int y);
 
+/* compare two values to determine if the right side is larger */
 bool rightMax(int a, int b);
 
+/* compare two values to determine if they are same */
 bool isSameValue(int leftValue, int rightValue);
 
+/* compare positions of two vaules to determine if they are same */
 bool isSamePosition(CELL* leftPos, CELL* rightPos);
+
 /* check the collision between the snake's head and the boundaries */
 bool isCollideBoundary(CELL snakePos, SCREEN* screen);
+
 /* check the collision between the snake's head and the snake's body */
 bool isCollideBody(SNAKE* snake);
 
