@@ -35,7 +35,8 @@ int main()
 		checkInput = isKeyInput(&inputValue);
 		if (checkInput)
 		{
-			switch (inputValue) {
+			switch (inputValue)
+			{
 			/* ESC, Q: quit game */
 			case 27:
 			case 'Q':
