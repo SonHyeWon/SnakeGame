@@ -12,8 +12,8 @@ int main()
 {
 	SNAKE	snake;
 	FRUIT	fruit;
-	SCREEN screen;
-	int	i, score = 0;
+	SCREEN  screen;
+	int	score = 0;
 	char	inputValue = '\0';
 	bool	quit = false, checkInput = false;
 
@@ -75,7 +75,7 @@ int main()
 		}
 
 		/* snake eats fruits? */
-                isCollideFruit(&snake, &fruit, screen, &score);
+		isCollideFruit(&snake, &fruit, screen, &score);
 
 		/* clear the game space */
 		if (quit == false)

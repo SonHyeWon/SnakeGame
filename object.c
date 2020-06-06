@@ -4,9 +4,11 @@
 #include "ui.h"
 #include <stdbool.h>
 
-void gotoxy(int x, int y) {
+void gotoxy(int x, int y) 
+{
 	HANDLE hConsoleOutput;
 	COORD Cursor_an_Pos = { x, y };
+
 	hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleCursorPosition(hConsoleOutput, Cursor_an_Pos);
 }
@@ -15,14 +17,17 @@ bool rightMax(int a, int b)
 {
 	return (a <= b);
 }
+
 bool isSameValue(int leftValue, int rightValue)
 {
 	return (leftValue == rightValue);
 }
+
 bool isSamePosition(CELL* leftPos, CELL* rightPos)
 {
 	return (isSameValue(leftPos->x, rightPos->x) && isSameValue(leftPos->y, rightPos->y));
 }
+
 bool isCollideBoundary(CELL snakePos, SCREEN* screen)
 {
 	if (rightMax(snakePos.y, screen->startPoint.y))
@@ -50,6 +55,7 @@ bool isCollideBoundary(CELL snakePos, SCREEN* screen)
 bool isCollideBody(SNAKE* snake)
 {
 	int i = 0;
+
 	for (i = 1; i < snake->length; i++)
 	{
 		if (isSamePosition(&snake->body[0], &snake->body[i]))
@@ -167,7 +173,9 @@ void moveSnake(SNAKE *snake)
 void updateBody(SNAKE *snake)
 {
 	int i;
-	for (i = snake->length - 1; i > 0; i--) {
+
+	for (i = snake->length - 1; i > 0; i--) 
+	{
 		snake->body[i] = snake->body[i - 1];
 	}
 }
@@ -246,17 +254,18 @@ void drawChar(CELL pos, int color, const char character)
 void drawObjects(SNAKE snake, FRUIT fruit, bool quit)
 {
 	int i;
+
 	if (quit == true) 
 	{
 		drawChar(snake.body[1], QUIT_COLOR, HEAD_SHAPE);	/* dead snake's head */
-		textcolor(TEXT_COLOR);					/* back to normal color */
+		textcolor(TEXT_COLOR);								/* back to normal color */
 		return;
 	}
 
-	for (i = 1; i < snake.length; i++) {
+	for (i = 1; i < snake.length; i++) 
+	{
 		drawChar(snake.body[i], BODY_COLOR, BODY_SHAPE);	/* snake's body */
 	}
 	drawChar(snake.body[0], HEAD_COLOR, HEAD_SHAPE);		/* snake's head */
 	drawChar(fruit.pos, fruit.color, FRUIT_SHAPE);			/* fruit */
 }
-
